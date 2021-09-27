@@ -34,15 +34,14 @@
                 @yield('breadcrumb')
             </ul>
 
-        </div>
 
-        <div class="row">
-            @include('includes.footer')
         </div>
-
     </div>
 
+</div>
 
+<div class="footer">
+    @include('includes.footer')
 </div>
 
 <!-- Bootstrap core JavaScript
