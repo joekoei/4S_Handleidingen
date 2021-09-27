@@ -42,8 +42,8 @@
                             $header_first_letter = $current_first_letter
                             ?>
 
-                            <li>
-                                <a href="/{{ $brand->id }}/{{ $brand->name_url_encoded }}/">{{ $brand->name }}</a>
+                            <li class="nopoint-li">
+                                <a class="button-styling" href="/{{ $brand->id }}/{{ $brand->name_url_encoded }}/">{{ $brand->name }}</a>
                             </li>
                         @endforeach
                     </ul>

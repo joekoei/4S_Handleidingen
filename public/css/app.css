@@ -43,9 +43,25 @@
     text-decoration:none;
     font-family:'Roboto',sans-serif;
     font-weight:300;
-    color:#FFFFFF;
+    color:black;
     text-align:center;
     transition: all 0.2s;
+}
+
+.button-styling:hover {
+    color: black;
+    background-color:#FFFFFF;
+    text-decoration: none;
+}
+
+
+.dataGuides {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.nopoint-li {
+    list-style: none;
 }
 
 :root {
