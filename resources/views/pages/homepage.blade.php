@@ -14,6 +14,30 @@
         @show
     </h1>
 
+        <div class="col-md-12">
+
+            <ul>
+                @foreach($query as $brand)
+                    @php
+                        $manualtype = DB::table('manual_type')->where('manual_id','=',$brand->id)->get();
+                        $manuallist = array($manualtype);
+                        $type_id = $manuallist[0][0]->type_id;
+
+                        $type = DB::table('types')->where('id','=',$type_id)->get();
+                        $typelist = array($type);
+                        $brandid = $typelist[0][0]->brand_id;
+
+                        $test = DB::table('brands')->where('id','=',$brandid)->get();
+                        $brandname = $test[0]->name;
+                        $brandtype = $typelist[0][0]->name;
+                    @endphp
+                    <li class="nopoint-li">
+                        <a class="button-styling" href="/">{{ $brandname }} : {{ $brandtype  }}</a>
+                    </li>
+                @endforeach
+            </ul>
+
+        </div>
 
     <?php
     $size = count($brands);

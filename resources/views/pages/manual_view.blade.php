@@ -13,7 +13,6 @@
 @section('content')
 
 <h1>{{ $brand->name }} - {{ $type->name }}</h1>
-
 @if ($manual->locally_available)
 	<iframe src="{{ $manual->url }}" width="780" height="600" frameborder="0" marginheight="0" marginwidth="0">
 	Iframes are not supported<br />
